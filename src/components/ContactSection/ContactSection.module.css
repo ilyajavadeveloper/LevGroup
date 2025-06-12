@@ -1,95 +1,63 @@
 .contact {
   background: linear-gradient(to right, #00444E, #E1A873);
-  padding: 60px 20px;
-  color: white;
+  padding: 80px 20px;
   text-align: center;
+  color: white;
 }
 
 .contact h2 {
   font-size: 2.4rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 30px;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-.info a {
+.link {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 8px;
-  transition: color 0.3s;
+  gap: 10px;
+  transition: opacity 0.3s;
 }
 
-.info a:hover {
-  color: #E1A873;
+.link:hover {
+  opacity: 0.8;
 }
 
 .socials {
   display: flex;
-  gap: 16px;
-  margin-top: 12px;
+  gap: 24px;
+  margin-top: 1rem;
 }
 
 .socials a {
   color: white;
-  font-size: 1.8rem;
-  transition: color 0.3s, transform 0.3s;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
 }
 
 .socials a:hover {
-  color: #E1A873;
-  transform: translateY(-4px);
+  transform: scale(1.2);
 }
 
-/* Форма */
-.form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form input,
-.form textarea {
-  padding: 12px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-}
-
-.form textarea {
-  resize: vertical;
-}
-
-.form button {
-  background-color: white;
-  color: #00444E;
-  font-weight: bold;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.form button:hover {
-  background-color: #E1A873;
-  color: #000;
-}
-
-@media (max-width: 600px) {
-  .info {
-    gap: 8px;
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2rem;
   }
+
+  .link {
+    font-size: 1rem;
+  }
+
   .socials {
-    gap: 12px;
+    gap: 18px;
   }
 }
