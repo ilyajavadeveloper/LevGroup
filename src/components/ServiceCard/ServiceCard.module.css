@@ -1,0 +1,25 @@
+.card {
+    background: white;
+    border-radius: 16px;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .iconWrapper {
+    font-size: 40px;
+    color: #00444E;
+    margin-bottom: 16px;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00444E;
+  }
+  

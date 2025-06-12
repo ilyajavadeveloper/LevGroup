@@ -1,0 +1,95 @@
+.contact {
+  background: linear-gradient(to right, #00444E, #E1A873);
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.info a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.info a:hover {
+  color: #E1A873;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.socials a {
+  color: white;
+  font-size: 1.8rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.socials a:hover {
+  color: #E1A873;
+  transform: translateY(-4px);
+}
+
+/* Форма */
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form input,
+.form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+.form button {
+  background-color: white;
+  color: #00444E;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #E1A873;
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .info {
+    gap: 8px;
+  }
+  .socials {
+    gap: 12px;
+  }
+}

@@ -1,0 +1,12 @@
+.services {
+    background: linear-gradient(to right, #00444E, #E1A873);
+    padding: 80px 20px;
+    color: white;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+  }
+  
