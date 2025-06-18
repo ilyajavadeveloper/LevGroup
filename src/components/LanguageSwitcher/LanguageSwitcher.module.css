@@ -2,33 +2,58 @@
   position: fixed;
   top: 20px;
   left: 20px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
   z-index: 1000;
 }
 
-.switcher button {
-  background: rgba(0, 68, 78, 0.9);
+.mainButton {
+  background: #E1A873;
+  color: #00444E;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
+}
+
+.mainButton:hover {
+  background: #cf9056;
+  color: white;
+}
+
+.dropdown {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdown button {
+  background: rgba(0, 68, 78, 0.95);
   color: #fff;
   border: none;
-  padding: 10px 16px;
+  padding: 10px 14px;
   border-radius: 8px;
   font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.switcher button:hover {
+.dropdown button:hover {
   background: #E1A873;
   color: #000;
 }
 
 @media (max-width: 600px) {
-  .switcher {
-    flex-direction: column;
-    align-items: flex-start;
+  .mainButton {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+
+  .dropdown button {
+    font-size: 0.95rem;
   }
 }

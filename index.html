@@ -1,25 +1,38 @@
-<!doctype html>
-<html lang="en">
+
+
+
+<!DOCTYPE html>
+<html lang="he">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
-
+    <title>Lev Group</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+
+    <!-- React Favicon и стили -->
+    <link rel="icon" type="image/png" href="/vite.svg" />
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet" />
+
+    <!-- Sienna Стили -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/sienna-accessibility-widget/dist/styles.css"
+    />
   </head>
   <script>
     (function(d){
       var s = d.createElement("script");
-      s.setAttribute("data-account", "YOUR_USERWAY_ACCOUNT_ID");
+      s.setAttribute("data-account", "your_userway_id"); // ← вставь ID с userway.org
       s.setAttribute("src", "https://cdn.userway.org/widget.js");
       (d.body || d.head).appendChild(s);
-    })(document)
+    })(document);
   </script>
-  
   <body>
     <div id="root"></div>
+
+    <!-- Vite / React -->
     <script type="module" src="/src/main.jsx"></script>
 
+    <!-- Подключаем Sienna динамически -->
+    
   </body>
 </html>
