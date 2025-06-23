@@ -2,15 +2,15 @@
 
 .hero {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0 20px;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #000; /* fallback на случай загрузки */
+  padding: 0;
+  margin: 0;
+  background-color: #000;
   overflow: hidden;
 }
 
@@ -21,7 +21,7 @@
   background-image: url("/ashdod.jpg");
   background-size: cover;
   background-position: center;
-  filter: brightness(0.75); /* без blur — четкий фон */
+  filter: brightness(0.75);
   z-index: 0;
 }
 
@@ -39,19 +39,22 @@
 .content {
   position: relative;
   z-index: 2;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .content p {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto 2rem;
   color: #f2f2f2;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   letter-spacing: 0.5px;
+  margin: 0 auto 2rem;
 }
 
+/* CTA кнопка */
 .cta {
   display: inline-block;
   padding: 14px 32px;
@@ -62,7 +65,7 @@
   text-transform: uppercase;
   border: none;
   border-radius: 12px;
-  text-decoration: none; /* убрано подчёркивание */
+  text-decoration: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -71,4 +74,33 @@
   background: #f2b77f;
   color: #002e33;
   transform: scale(1.05);
+}
+
+/* ====== АДАПТАЦИЯ ====== */
+@media (max-width: 768px) {
+  .content p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content p {
+    font-size: 1rem;
+  }
+
+  .cta {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
 }
