@@ -15,10 +15,14 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-   
         <HeroTitle />
         <p>{t('hero.subtitle')}</p>
-        <a href="#contact" className={styles.cta}>
+        <a
+          href="https://wa.me/972525339443"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.cta}
+        >
           {t('hero.cta')}
         </a>
       </motion.div>
