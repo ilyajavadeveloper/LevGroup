@@ -1,10 +1,10 @@
-.App {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
-  color: #00444E;
-}
-body, #root {
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap');
+
+body {
   margin: 0;
   padding: 0;
-  background: #00444E;
+  font-family: 'Assistant', sans-serif;
+  color: white;
+  background-color: #00444E; /* или #111 для контраста */
+  overflow-x: hidden;
 }

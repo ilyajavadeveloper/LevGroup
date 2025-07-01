@@ -1,7 +1,8 @@
+// src/components/ServicesSection/ServicesSection.jsx
 import { useTranslation } from 'react-i18next';
 import services from '../../data/services';
 import ServiceCard from '../ServiceCard/ServiceCard';
-import styles from './ServiceSection.module.css'; // ✅ правильно
+import styles from '../ServicesSection/ServiceSection.module.css';
 
 
 import { motion } from 'framer-motion';
@@ -17,6 +18,7 @@ export default function ServicesSection() {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
+      <h2 className={styles.title}>השירותים שלנו</h2>
       <div className={styles.grid}>
         {services.map((service, index) => (
           <motion.div
@@ -27,7 +29,7 @@ export default function ServicesSection() {
             viewport={{ once: true }}
           >
             <ServiceCard
-              title={service.title[i18n.language]}
+              title={service.title[i18n.language] || service.title.en}
               icon={service.icon}
             />
           </motion.div>

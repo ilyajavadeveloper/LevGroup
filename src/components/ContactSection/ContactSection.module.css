@@ -1,13 +1,18 @@
 .contact {
   background: linear-gradient(to right, #00444E, #E1A873);
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
   color: white;
 }
 
-.contact h2 {
-  font-size: 2.4rem;
+.title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.5px;
   margin-bottom: 2rem;
+  transition: color 0.3s ease;
 }
 
 .info {
@@ -49,7 +54,7 @@
 }
 
 @media (max-width: 768px) {
-  .contact h2 {
+  .title {
     font-size: 2rem;
   }
 

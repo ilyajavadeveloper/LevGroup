@@ -1,13 +1,13 @@
 {
-    "hero.title": "ניהול ותחזוקת מבנים",
-    "hero.subtitle": "שירות מקצועי בדרום ישראל",
-    "hero.cta": "צרו קשר",
-    "contact.title": "צור קשר",
-    "form.name": "שם",
-    "form.phone": "טלפון",
-    "form.message": "הודעה",
-    "form.send": "שלח",
-    "form.success": "✅ ההודעה נשלחה בהצלחה!",
-    "form.error": "❌ שליחת ההודעה נכשלה."
-  }
-  
+  "hero.title": "ניהול ותחזוקת מבנים",
+  "hero.subtitle": "שירות מקצועי בדרום ישראל",
+  "hero.cta": "צרו קשר",
+  "contact.title": "צור קשר",
+  "form.name": "שם",
+  "form.phone": "טלפון",
+  "form.message": "הודעה",
+  "form.send": "שלח",
+  "form.success": "✅ ההודעה נשלחה בהצלחה!",
+  "form.error": "❌ שליחת ההודעה נכשלה.",
+  "services.title": "השירותים שלנו"
+}

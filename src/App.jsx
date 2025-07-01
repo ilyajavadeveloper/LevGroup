@@ -10,7 +10,7 @@ import './i18n';
 function App() {
   return (
     <div className="App">
-           <Header />
+      <LanguageSwitcher/>
       <HeroSection />
       <ServicesSection />
       <ContactSection />

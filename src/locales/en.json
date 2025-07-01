@@ -1,13 +1,13 @@
 {
-    "hero.title": "Building Management and Maintenance",
-    "hero.subtitle": "Professional service in southern Israel",
-    "hero.cta": "Contact us",
-    "contact.title": "Contact Us",
-    "form.name": "Name",
-    "form.phone": "Phone",
-    "form.message": "Message",
-    "form.send": "Send",
-    "form.success": "✅ Message sent successfully!",
-    "form.error": "❌ Failed to send message."
-  }
-  
+  "hero.title": "Building Management and Maintenance",
+  "hero.subtitle": "Professional service in southern Israel",
+  "hero.cta": "Contact us",
+  "contact.title": "Contact Us",
+  "form.name": "Name",
+  "form.phone": "Phone",
+  "form.message": "Message",
+  "form.send": "Send",
+  "form.success": "✅ Message sent successfully!",
+  "form.error": "❌ Failed to send message.",
+  "services.title": "Our Services"
+}

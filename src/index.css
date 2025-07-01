@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('./assets/ashdod.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Assistant', sans-serif;
+    color: white;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.4); /* затемнение сверху */
+    z-index: -1;
+  }
+  

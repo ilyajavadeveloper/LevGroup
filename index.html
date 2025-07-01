@@ -3,23 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEV GROUP</title>
+
+    <!-- Шрифты -->
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <!-- Sienna Accessibility Widget -->
+    <script>
+      (function () {
+        var script = document.createElement("script");
+        script.src = "https://sienna.co.il/accessibility/accessibility.js";
+        script.async = true;
+        document.head.appendChild(script);
+      })();
+    </script>
   </head>
-  <script>
-    (function(d){
-      var s = d.createElement("script");
-      s.setAttribute("data-account", "YOUR_USERWAY_ACCOUNT_ID");
-      s.setAttribute("src", "https://cdn.userway.org/widget.js");
-      (d.body || d.head).appendChild(s);
-    })(document)
-  </script>
-  
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-
   </body>
 </html>
