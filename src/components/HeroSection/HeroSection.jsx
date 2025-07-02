@@ -9,10 +9,13 @@ export default function HeroSection() {
 
   return (
     <section className={styles.hero}>
-      {/* Верхний затемняющий градиент */}
+      {/* Верхний градиент-затемнение */}
       <div className={styles.overlay} />
 
-      {/* Контент по центру */}
+      {/* Размытие в нижней части фото */}
+      <div className={styles.blurOverlay} />
+
+      {/* Основной контент */}
       <motion.div
         className={styles.content}
         initial={{ opacity: 0, y: 50 }}
@@ -26,8 +29,13 @@ export default function HeroSection() {
         </a>
       </motion.div>
 
-      {/* Нижний плавный переход к следующей секции */}
+      {/* Цветовой градиент вниз */}
       <div className={styles.bottomFade} />
+
+      {/* Волнообразный переход к следующей секции */}
+      <svg className={styles.wave} viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#E1A873" />
+      </svg>
     </section>
   );
 }

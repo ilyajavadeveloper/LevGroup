@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Lev Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEV GROUP</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- UserWay Widget (только вставь свой ID!) -->
     <script>
       (function(d){
         var s = d.createElement("script");
-        s.setAttribute("data-account", "YOUR_USERWAY_ACCOUNT_ID");
-        s.src="https://cdn.userway.org/widget.js";
-        (d.body || d.head).appendChild(s);
-      })(document)
+        s.setAttribute("data-account", "ВАШ-ID-СЮДА");
+        s.src = "https://cdn.userway.org/widget.js";
+        s.async = true;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })(document);
     </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
