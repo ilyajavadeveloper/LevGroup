@@ -1,60 +1,45 @@
 .hero {
+  background: url('/ashdod.png') center/cover no-repeat;
   position: relative;
   min-height: 100vh;
-  background: url('/images/The-Old-Land-Registration-Method-Ashdod.jpg') center/cover no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 0 20px;
-  color: #fff;
   overflow: hidden;
-  font-family: 'Manrope', sans-serif;
 }
 
 .overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 35%;
-  width: 100%;
-  background: linear-gradient(to top, #0b0b0f, transparent);
+  inset: 0;
+  background: linear-gradient(to right, #00444E, #E1A873);
   z-index: 1;
 }
 
-.blurOverlay {
-  position: absolute;
-  bottom: 100px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.05) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  backdrop-filter: blur(26px);
-  -webkit-backdrop-filter: blur(26px);
-  z-index: 3;
-  pointer-events: none;
-}
 
 .content {
   position: relative;
-  z-index: 4;
+  z-index: 2;
   max-width: 800px;
   padding: 40px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .subtitle {
   font-size: 1.4rem;
   font-weight: 500;
-  max-width: 700px;
-  margin: 0 auto 2rem;
+  margin-bottom: 2rem;
+  color: #eaeaea;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  color: #f0f0f0;
-  letter-spacing: 0.5px;
 }
 
 .cta {
@@ -62,8 +47,8 @@
   padding: 16px 36px;
   background: #E1A873;
   color: #0b0b0f;
-  font-weight: 700;
   font-size: 1.1rem;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 12px;
@@ -75,32 +60,20 @@
 .cta:hover {
   background: #f2c38d;
   transform: scale(1.05);
-  color: #000;
-}
-.bottomFade {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 180px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 32, 39, 0.5) 30%,
-    rgba(0, 68, 78, 0.6) 55%,
-    rgba(49, 124, 117, 0.8) 75%,
-    #E1A873 100%
-  );
-  z-index: 2;
 }
 
-
-.wave {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  z-index: 5;
-  pointer-events: none;
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .content {
+    padding: 20px 10px;
+  }
+  .cta {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
 }
