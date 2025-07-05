@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import styles from './HeroSection.module.css';
+
 export default function HeroSection() {
   const { t } = useTranslation();
 
