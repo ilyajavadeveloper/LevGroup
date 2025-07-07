@@ -87,23 +87,6 @@ export default function ContactSection() {
             <FaInstagram />
           </a>
         </div>
-        <div className="wave-separator-bottom">
-  <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
-    <path
-      fill="url(#fadeGradientBottom)"
-      d="M0,100 C480,0 960,100 1440,0 L1440,100 L0,100 Z"
-      opacity="0.68"
-    />
-    <defs>
-      <linearGradient id="fadeGradientBottom" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#00444E" />
-        <stop offset="50%" stop-color="#2D6168" />
-        <stop offset="100%" stop-color="#E1A873" />
-      </linearGradient>
-    </defs>
-  </svg>
-</div>
-
       </motion.div>
     </motion.section>
   );
