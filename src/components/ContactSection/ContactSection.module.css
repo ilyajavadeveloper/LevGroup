@@ -1,30 +1,69 @@
 .contact {
-  /* Сдвигаем угол, чтобы перелив начинался чуть ниже/другой акцент */
-  background: linear-gradient(95deg, #00444E 0%, #2D6168 35%, #E1A873 100%);
-  padding: 100px 20px 85px 20px;
+  position: relative;
+  z-index: 2;
+  padding: 95px 6vw 75px 6vw;
   text-align: center;
   color: #f5e3c1;
+  background: linear-gradient(105deg, #00444E 0%, #2D6168 53%, #E1A873 100%);
+  overflow: hidden;
 }
+
+/* БОЛЕЕ ВЫСОКАЯ И НЕЖНАЯ дымка сверху для ультра-плавного перехода */
+.contact::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; right: 0;
+  height: 95px;
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 227, 193, 0.16) 0%,
+    rgba(0,68,78, 0.13) 40%,
+    rgba(0,0,0,0.00) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Чуть выше и прозрачнее дымка снизу — граница совсем не видна */
+.contact::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 70px;
+  background: linear-gradient(
+    to top,
+    rgba(225,168,115, 0.11) 0%,
+    rgba(45,97,104, 0.05) 45%,
+    rgba(0,0,0,0.00) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
 .title {
-  font-size: 2.65rem;
+  font-size: 2.28rem;
   font-weight: 900;
   color: #F5E3C1;
-  text-shadow: 0 2px 10px rgba(27,36,36,0.14);
+  text-shadow: 0 2px 10px rgba(27,36,36,0.13);
   letter-spacing: 2px;
   margin-bottom: 2.1rem;
   text-transform: uppercase;
   font-family: 'Manrope', sans-serif;
+  position: relative;
+  z-index: 2;
 }
 .info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.3rem;
-  margin-bottom: 2.4rem;
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
 }
 .link {
   color: #FFEBC2;
-  font-size: 1.27rem;
+  font-size: 1.17rem;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -35,34 +74,56 @@
   text-transform: uppercase;
 }
 .link:hover {
-  opacity: 0.77;
+  opacity: 0.82;
   color: #E1A873;
 }
 .socials {
   display: flex;
-  gap: 29px;
-  margin-top: 1.2rem;
+  gap: 23px;
+  margin-top: 1.1rem;
+  position: relative;
+  z-index: 2;
 }
 .socials a {
   color: #F5E3C1;
-  font-size: 2.15rem;
-  transition: transform 0.21s, color 0.21s;
+  font-size: 2rem;
+  transition: transform 0.18s, color 0.18s;
 }
 .socials a:hover {
-  transform: scale(1.17);
+  transform: scale(1.13);
   color: #E1A873;
 }
 
-/* Responsive */
+/* ----- МОБИЛЬНАЯ АДАПТИВНОСТЬ ----- */
 @media (max-width: 1000px) {
-  .title { font-size: 2rem; }
-  .link { font-size: 1rem; }
+  .title { font-size: 1.68rem; }
+  .link { font-size: 0.97rem; }
 }
 @media (max-width: 700px) {
-  .title { font-size: 1.35rem; }
-  .link { font-size: 0.95rem; }
-  .socials { gap: 18px; }
+  .contact {
+    padding: 74px 2vw 64px 2vw;
+  }
+  .title {
+    font-size: 1.22rem;
+    letter-spacing: 1.2px;
+  }
+  .info { gap: 0.96rem; }
+  .link { font-size: 0.91rem; }
+  .socials { gap: 14px; }
+  .contact::before { height: 70px; }
+  .contact::after { height: 54px; }
 }
 @media (max-width: 500px) {
-  .title { font-size: 1.1rem; }
+  .contact {
+    padding: 54px 0.5vw 44px 0.5vw;
+  }
+  .title {
+    font-size: 0.93rem;
+    margin-bottom: 0.9rem;
+  }
+  .info { gap: 0.75rem; }
+  .link { font-size: 0.75rem; }
+  .socials a { font-size: 1.24rem; }
+  .contact::before { height: 47px; }
+  .contact::after { height: 34px; }
 }

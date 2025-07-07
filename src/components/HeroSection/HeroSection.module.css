@@ -6,7 +6,7 @@
   justify-content: center;
   padding: 0 20px;
   overflow: hidden;
-  background: 
+  background:
     linear-gradient(120deg, rgba(0,68,78,0.66) 0%, rgba(225,168,115,0.14) 75%, rgba(245,227,193,0.13) 100%),
     url('/images/ashdod.jpg') center/cover no-repeat;
 }
@@ -101,34 +101,34 @@
 /* ----- МОБИЛЬНАЯ АДАПТИВНОСТЬ ----- */
 @media (max-width: 1000px) {
   .content { padding: 36px 6vw; }
-  .title { font-size: 2.5rem; }
-  .subtitle { font-size: 1.17rem; }
-  .cta { font-size: 1.08rem; padding: 1.07em 2.6em; }
+  .title { font-size: 3.2rem; }
+  .subtitle { font-size: 1.35rem; }
+  .cta { font-size: 1.13rem; padding: 1.07em 2.6em; }
 }
 
 @media (max-width: 700px) {
   .hero {
-    min-height: 100vh;           /* ФОТО НА ВЕСЬ ЭКРАН */
+    min-height: 100vh;
     padding: 0 0vw;
     background-size: cover;
     background-position: center top;
   }
   .content {
-    padding: 22px 2vw 18px 2vw;
+    padding: 16px 2vw 12px 2vw;
   }
   .title {
-    font-size: 2.14rem;
+    font-size: 2.48rem;
     letter-spacing: 1.7px;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.2rem;
   }
   .subtitle {
-    font-size: 1.11rem;
-    margin-bottom: 1.6rem;
-    letter-spacing: 1.2px;
+    font-size: 1.48rem;
+    margin-bottom: 1.3rem;
+    letter-spacing: 1.15px;
   }
   .cta {
-    font-size: 1.05rem;
-    padding: 0.88em 2.1em;
+    font-size: 1.17rem;
+    padding: 1em 2.3em;
   }
 }
 
@@ -140,21 +140,21 @@
     background-position: center center;
   }
   .content {
-    padding: 12px 1vw;
+    padding: 10px 0.5vw;
   }
   .title {
-    font-size: 1.38rem;
-    margin-bottom: 1.1rem;
-    letter-spacing: 1.2px;
+    font-size: 1.92rem;
+    margin-bottom: 1.0rem;
+    letter-spacing: 1.07px;
   }
   .subtitle {
-    font-size: 0.98rem;
-    margin-bottom: 1.18rem;
-    letter-spacing: 1px;
+    font-size: 1.13rem;
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.92px;
   }
   .cta {
-    font-size: 0.92rem;
-    padding: 0.81em 1.6em;
-    margin-top: 0.25rem;
+    font-size: 1.03rem;
+    padding: 0.95em 1.5em;
+    margin-top: 0.2rem;
   }
 }

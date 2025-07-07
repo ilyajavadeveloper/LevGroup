@@ -1,34 +1,77 @@
 .switcher {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  z-index: 1000;
+  position: absolute;
+  top: 24px;
+  left: 28px;        /* БЫЛО right: 28px; СТАЛО left! */
+  z-index: 99;
 }
 
-.switcher button {
-  background: rgba(0, 68, 78, 0.9);
+.toggle {
+  display: flex;
+  align-items: center;
+  background: rgba(0,68,78,0.37);
   color: #fff;
   border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
+  padding: 7px 17px 7px 13px;
+  border-radius: 16px;
+  font-size: 1.04rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  transition: background 0.19s, color 0.14s;
+  backdrop-filter: blur(2px);
+}
+
+.toggle:hover, .toggle:focus {
+  background: #E1A873;
+  color: #00444E;
+}
+
+.menu {
+  position: absolute;
+  left: 0;          /* БЫЛО right: 0; */
+  top: 120%;
+  min-width: 122px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.16);
+  padding: 4px 0;
+  margin: 0;
+  list-style: none;
+  animation: fadeIn 0.18s;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.menu li { width: 100%; }
+
+.menu button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #00444E;
   font-size: 1rem;
+  padding: 8px 18px;
+  text-align: left;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.13s, color 0.11s;
 }
-
-.switcher button:hover {
+.menu button:hover, .menu button:focus {
   background: #E1A873;
-  color: #000;
+  color: #222;
+}
+.menu .active {
+  background: #00444E;
+  color: #fff;
+  cursor: default;
 }
 
-@media (max-width: 600px) {
-  .switcher {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+@media (max-width: 700px) {
+  .switcher { top: 14px; left: 10px; }
+  .toggle { padding: 5.5px 12px 5.5px 10px; font-size: 0.97rem; }
+  .menu { min-width: 96px; }
 }
