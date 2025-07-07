@@ -1,0 +1,6 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(115deg, #00444E 0%, #2D6168 53%, #E1A873 100%);
+    /* Или используй :root, если у тебя root-див */
+  }
+  

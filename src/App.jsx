@@ -1,7 +1,6 @@
 import './App.css';
 import ContactSection from './components/ContactSection/ContactSection';
-import Header from './components/Header/Header';
-import HeroSection from './components/HeroSection/HeroSection';
+import HeroSection from './components/HeroSection/HeroSection'
 import LanguageSwitcher from './components/LanguageSwitcher/LanguageSwitcher';
 import ServicesSection from './components/ServicesSection/ServiceSection';
 

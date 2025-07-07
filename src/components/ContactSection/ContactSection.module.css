@@ -1,68 +1,107 @@
 .contact {
-  background: linear-gradient(to right, #00444E, #E1A873);
-  padding: 100px 20px;
+  position: relative;
+  z-index: 2;
+  padding: 90px 20px 70px 20px;
   text-align: center;
-  color: white;
+  color: #f5e3c1;
+  background: linear-gradient(110deg, #00444E 2%, #2D6168 48%, #E1A873 100%);
+  overflow: hidden;
+}
+
+/* Плавная дымка сверху для мягкого перехода с services */
+.contact::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; right: 0;
+  height: 75px;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.07) 0%,
+    rgba(0,0,0,0.00) 100%
+  );
+  pointer-events: none;
+}
+
+/* Дымка снизу для плавного конца сайта */
+.contact::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 55px;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(0,68,78,0.23) 0%,
+    rgba(0,0,0,0.00) 100%
+  );
+  pointer-events: none;
 }
 
 .title {
-  font-size: 2.3rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  letter-spacing: 0.5px;
-  margin-bottom: 2rem;
-  transition: color 0.3s ease;
+  font-size: 2.55rem;
+  font-weight: 900;
+  color: #F5E3C1;
+  text-shadow: 0 2px 10px rgba(27,36,36,0.13);
+  letter-spacing: 2px;
+  margin-bottom: 2.1rem;
+  text-transform: uppercase;
+  font-family: 'Manrope', 'Assistant', sans-serif;
+  position: relative;
+  z-index: 2;
 }
-
 .info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
-  margin-bottom: 2rem;
+  gap: 1.3rem;
+  margin-bottom: 2.4rem;
+  position: relative;
+  z-index: 2;
 }
-
 .link {
-  color: white;
-  font-size: 1.2rem;
+  color: #FFEBC2;
+  font-size: 1.27rem;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: opacity 0.3s;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  transition: opacity 0.25s, color 0.15s;
+  text-transform: uppercase;
 }
-
 .link:hover {
-  opacity: 0.8;
+  opacity: 0.77;
+  color: #E1A873;
 }
-
 .socials {
   display: flex;
-  gap: 24px;
-  margin-top: 1rem;
+  gap: 29px;
+  margin-top: 1.2rem;
+  position: relative;
+  z-index: 2;
 }
-
 .socials a {
-  color: white;
-  font-size: 2rem;
-  transition: transform 0.3s ease;
+  color: #F5E3C1;
+  font-size: 2.15rem;
+  transition: transform 0.21s, color 0.21s;
 }
-
 .socials a:hover {
-  transform: scale(1.2);
+  transform: scale(1.17);
+  color: #E1A873;
 }
 
-@media (max-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
-
-  .link {
-    font-size: 1rem;
-  }
-
-  .socials {
-    gap: 18px;
-  }
+/* Адаптивность */
+@media (max-width: 1000px) {
+  .title { font-size: 2rem; }
+  .link { font-size: 1rem; }
+}
+@media (max-width: 700px) {
+  .title { font-size: 1.35rem; }
+  .link { font-size: 0.95rem; }
+  .socials { gap: 18px; }
+}
+@media (max-width: 500px) {
+  .title { font-size: 1.1rem; }
 }

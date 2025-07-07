@@ -5,6 +5,9 @@ body {
   padding: 0;
   font-family: 'Assistant', sans-serif;
   color: white;
-  background-color: #00444E; /* или #111 для контраста */
+  background: linear-gradient(115deg, #00444E 0%, #2D6168 53%, #E1A873 100%);
+  /* Чтобы фон был всегда на месте при прокрутке: */
+  background-attachment: fixed;
+  min-height: 100vh;
   overflow-x: hidden;
 }
