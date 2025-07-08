@@ -55,7 +55,7 @@ export default function ContactSection() {
           rel="noopener noreferrer"
           className={styles.link}
         >
-          <FaMapMarkerAlt className={styles.icon} /> שדרות ירושלים 18, אשדוד
+          <FaMapMarkerAlt className={styles.icon} />  שדרות ירושלים 18, אשדוד
         </a>
         <div className={styles.socials}>
           <a
