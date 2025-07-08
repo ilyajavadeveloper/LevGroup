@@ -1,4 +1,3 @@
-// src/components/ContactSection/ContactSection.jsx
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import styles from './ContactSection.module.css';
@@ -40,33 +39,31 @@ export default function ContactSection() {
         transition={{ delay: 0.5 }}
       >
         <a href="tel:0525339443" className={styles.link}>
-          <FaPhoneAlt /> 052‑5339443
+          <FaPhoneAlt className={styles.icon} /> 052‑5339443
         </a>
-
         <a
           href="https://mail.google.com/mail/?view=cm&to=levgroup4u@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
         >
-          <FaEnvelope /> levgroup4u@gmail.com
+          <FaEnvelope className={styles.icon} /> levgroup4u@gmail.com
         </a>
-
         <a
           href="https://www.google.com/maps/search/?api=1&query=שדרות+ירושלים+18,+אשדוד"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
         >
-          <FaMapMarkerAlt /> שדרות ירושלים 18, אשדוד
+          <FaMapMarkerAlt className={styles.icon} /> שדרות ירושלים 18, אשדוד
         </a>
-
         <div className={styles.socials}>
           <a
             href="https://wa.me/972525339443"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
+            className={styles.socialIcon}
           >
             <FaWhatsapp />
           </a>
@@ -75,6 +72,7 @@ export default function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
+            className={styles.socialIcon}
           >
             <FaFacebookF />
           </a>
@@ -83,6 +81,7 @@ export default function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
+            className={styles.socialIcon}
           >
             <FaInstagram />
           </a>

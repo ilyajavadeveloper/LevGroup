@@ -1,7 +1,7 @@
-// src/components/HeroSection/HeroSection.jsx
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import styles from './HeroSection.module.css';
+import HeroTitle from '../HeroTitle/HeroTitle'; // Импортируем заголовок LEV GROUP
 
 export default function HeroSection() {
   const { t } = useTranslation();
@@ -15,6 +15,7 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
+        <HeroTitle /> {/* Большой красивый LEV GROUP */}
         <h1 className={styles.title}>{t('hero.title')}</h1>
         <p className={styles.subtitle}>{t('hero.subtitle')}</p>
         <a
