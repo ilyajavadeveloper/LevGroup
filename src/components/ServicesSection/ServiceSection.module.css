@@ -8,7 +8,6 @@
   overflow: hidden;
 }
 
-/* Плавная дымка сверху для мягкого перехода из Hero */
 .services::before {
   content: "";
   position: absolute;
@@ -24,7 +23,6 @@
   pointer-events: none;
 }
 
-/* Плавная дымка снизу для мягкого перехода в Contact */
 .services::after {
   content: "";
   position: absolute;
@@ -40,6 +38,42 @@
   pointer-events: none;
 }
 
+/* === ГЛАВНЫЙ ЯРКИЙ ЗАГОЛОВОК === */
+.bigTitle {
+  font-size: clamp(3.6rem, 8vw, 6.1rem);
+  font-weight: 900;
+  margin-bottom: 2.9rem;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  font-family: 'Manrope', 'Assistant', sans-serif;
+  line-height: 1.07;
+  text-align: center;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+  text-shadow:
+    0 8px 46px #e1a87345,
+    0 4px 20px #00444e70;
+}
+
+.gradientText {
+  display: inline-block;
+  background: linear-gradient(92deg, #FFEBC2 0%, #E1A873 35%, #FFF4DD 65%, #E1A873 100%);
+  background-size: 320% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  filter: brightness(1.12) drop-shadow(0 3px 15px #e1a8732c);
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* ==== СТАНДАРТНЫЙ ТЕКСТ ==== */
 .title {
   font-size: 2.85rem;
   font-weight: 900;
@@ -54,6 +88,7 @@
   z-index: 2;
 }
 
+/* === GRID === */
 .grid {
   display: grid;
   gap: 2rem;
@@ -62,6 +97,7 @@
   z-index: 2;
 }
 
+/* === КАРТОЧКИ === */
 .card {
   background: rgba(255,255,255,0.09);
   box-shadow: 0 6px 32px rgba(0,0,0,0.09);
@@ -84,14 +120,17 @@
   font-family: 'Manrope', 'Assistant', sans-serif;
 }
 
-/* Адаптивность */
+/* === АДАПТИВНОСТЬ === */
 @media (max-width: 1000px) {
+  .bigTitle { font-size: 2.55rem; }
   .title { font-size: 2.2rem; }
 }
 @media (max-width: 700px) {
+  .bigTitle { font-size: 1.55rem; }
   .title { font-size: 1.35rem; }
   .card { padding: 18px 8px; }
 }
 @media (max-width: 500px) {
+  .bigTitle { font-size: 1.08rem; }
   .title { font-size: 1.1rem; }
 }

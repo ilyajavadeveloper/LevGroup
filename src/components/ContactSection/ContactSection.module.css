@@ -1,18 +1,17 @@
 .contact {
   position: relative;
   z-index: 2;
-  padding: 95px 6vw 75px 6vw;
+  padding: 80px 6vw 60px 6vw;
   text-align: center;
   color: #f5e3c1;
   background: linear-gradient(109deg, #00444E 0%, #2D6168 59%, #13535c 100%);
-  /* #E1A873 почти убран из основного фона для большей гармонии */
   overflow: hidden;
 }
 .contact::before {
   content: "";
   position: absolute;
   left: 0; top: 0; right: 0;
-  height: 95px;
+  height: 70px;
   background: linear-gradient(
     to bottom,
     rgba(245, 227, 193, 0.13) 0%,
@@ -26,7 +25,7 @@
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 70px;
+  height: 45px;
   background: linear-gradient(
     to top,
     rgba(225,168,115, 0.05) 0%,
@@ -37,19 +36,23 @@
   z-index: 1;
 }
 
-.title {
-  font-size: 2.25rem;
-  font-weight: 900;
-  color: #F5E3C1;
-  text-shadow: 0 2px 10px rgba(40,54,54,0.14);
-  letter-spacing: 2.2px;
-  margin-bottom: 2.1rem;
+/* --- ЗАГОЛОВОК --- */
+.bigTitle {
+  font-size: clamp(2.1rem, 5vw, 3.7rem);
+  font-weight: 950;
+  margin-bottom: 2.2rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Manrope', 'Assistant', sans-serif;
+  line-height: 1.07;
+  text-align: center;
+  user-select: none;
   position: relative;
   z-index: 2;
+  text-shadow: 0 4px 24px #e1a87338, 0 2px 10px #00444e33;
 }
 
+/* --- КОНТАКТЫ --- */
 .info {
   display: flex;
   flex-direction: column;
@@ -61,97 +64,94 @@
 }
 
 .link {
-  color: #e5dac2;
-  font-size: 1.32rem;
+  color: #ffe3b1;
+  font-size: 1.45rem;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 18px;
   font-weight: 700;
-  letter-spacing: 1.1px;
-  transition: opacity 0.25s, color 0.19s, background 0.22s;
+  letter-spacing: 1.12px;
+  transition: opacity 0.2s, color 0.15s, background 0.15s;
   text-transform: uppercase;
   border-radius: 12px;
-  padding: 0.5em 0.98em;
-  background: rgba(0, 68, 78, 0.04);
+  padding: 0.45em 0.88em;
+  background: none;
 }
 .link:hover,
 .link:focus {
-  opacity: 0.85;
+  opacity: 0.88;
   color: #e1a873;
-  background: rgba(255, 235, 194, 0.07);
+  background: rgba(255, 235, 194, 0.08);
 }
 
 .icon {
-  font-size: 1.8em;
+  font-size: 1.6em;
   vertical-align: middle;
-  color: #e1a873d1; /* мягкий золотой */
+  color: #e1a873d1;
 }
 
 .socials {
   display: flex;
-  gap: 26px;
-  margin-top: 1.25rem;
+  gap: 30px;
+  margin-top: 1.3rem;
   position: relative;
   z-index: 2;
   justify-content: center;
 }
+
 .socialIcon {
   color: #f5e3c1;
-  font-size: 2.19rem;
-  transition: transform 0.17s, color 0.15s, background 0.19s;
+  font-size: 2.1rem;
+  transition: color 0.16s, background 0.17s, transform 0.13s;
   border-radius: 100px;
-  padding: 0.19em;
-  background: rgba(0, 68, 78, 0.11);
-  box-shadow: 0 2px 13px #2d616826;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .socialIcon:hover,
 .socialIcon:focus {
-  transform: scale(1.15);
   color: #e1a873;
-  background: rgba(225,168,115,0.15);
+  background: rgba(225,168,115,0.13);
+  transform: scale(1.11);
 }
 
-/* --- МОБИЛЬНАЯ АДАПТИВНОСТЬ --- */
+/* --- АДАПТИВНОСТЬ --- */
 @media (max-width: 1000px) {
-  .title { font-size: 1.58rem; }
-  .link { font-size: 1.08rem; }
-  .icon { font-size: 1.33em; }
-  .socialIcon { font-size: 1.53rem; }
-  .socials { gap: 17px; }
+  .bigTitle { font-size: 1.55rem; }
+  .link { font-size: 1.19rem; }
+  .icon { font-size: 1.22em; }
+  .socialIcon { font-size: 1.25rem; }
+  .socials { gap: 18px; }
 }
 
 @media (max-width: 700px) {
   .contact {
-    padding: 52px 1vw 37px 1vw;
+    padding: 36px 1vw 19px 1vw;
   }
-  .title {
-    font-size: 1.09rem;
-    letter-spacing: 1.1px;
-    margin-bottom: 1.08rem;
-  }
-  .info { gap: 0.87rem; }
-  .link { font-size: 0.89rem; padding: 0.77em 0.32em; }
-  .icon { font-size: 1.18em; }
-  .socialIcon { font-size: 1.11rem; }
-  .socials { gap: 11px; }
-  .contact::before { height: 33px; }
-  .contact::after { height: 18px; }
+  .bigTitle { font-size: 0.99rem; }
+  .info { gap: 1.05rem; }
+  .link { font-size: 1.04rem; padding: 0.98em 0.21em; }
+  .icon { font-size: 1.09em; }
+  .socialIcon { font-size: 1.09rem; }
+  .socials { gap: 9px; }
+  .contact::before { height: 20px; }
+  .contact::after { height: 11px; }
 }
 
 @media (max-width: 500px) {
   .contact {
-    padding: 31px 0.5vw 15px 0.5vw;
+    padding: 19px 0.5vw 8px 0.5vw;
   }
-  .title {
-    font-size: 0.87rem;
-    margin-bottom: 0.55rem;
-  }
-  .info { gap: 0.57rem; }
-  .link { font-size: 0.76rem; padding: 0.61em 0.09em; }
-  .icon { font-size: 0.99em; }
-  .socialIcon { font-size: 0.95rem; }
-  .socials { gap: 8px; }
-  .contact::before { height: 17px; }
-  .contact::after { height: 9px; }
+  .bigTitle { font-size: 0.78rem; }
+  .info { gap: 0.7rem; }
+  .link { font-size: 0.83rem; padding: 0.81em 0.07em; }
+  .icon { font-size: 0.95em; }
+  .socialIcon { font-size: 0.91rem; }
+  .socials { gap: 6px; }
+  .contact::before { height: 8px; }
+  .contact::after { height: 4px; }
 }

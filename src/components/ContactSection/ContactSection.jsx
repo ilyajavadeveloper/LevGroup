@@ -24,12 +24,12 @@ export default function ContactSection() {
       transition={{ duration: 1 }}
     >
       <motion.h2
-        className={styles.title}
+        className={styles.bigTitle}
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3 }}
+        transition={{ delay: 0.25 }}
       >
-        {t('contact.title')}
+        {t('contact.title').toUpperCase()}
       </motion.h2>
 
       <motion.div
