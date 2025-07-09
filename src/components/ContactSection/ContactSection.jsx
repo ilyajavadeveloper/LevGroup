@@ -42,12 +42,10 @@ export default function ContactSection() {
           <FaPhoneAlt className={styles.icon} /> 052‑5339443
         </a>
         <a
-          href="https://mail.google.com/mail/?view=cm&to=levgroup4u@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:levgroup.m@gmail.com"
           className={styles.link}
         >
-          <FaEnvelope className={styles.icon} /> levgroup4u@gmail.com
+          <FaEnvelope className={styles.icon} /> levgroup.m@gmail.com
         </a>
         <a
           href="https://www.google.com/maps/search/?api=1&query=שדרות+ירושלים+18,+אשדוד"
@@ -55,7 +53,13 @@ export default function ContactSection() {
           rel="noopener noreferrer"
           className={styles.link}
         >
-          <FaMapMarkerAlt className={styles.icon} />  שדרות ירושלים 18, אשדוד
+          <FaMapMarkerAlt className={styles.icon} />
+          <span>
+            שדרות ירושלים 18, אשדוד
+            <span className={styles.kate}>
+              ,&nbsp;K Towers, Ashdod
+            </span>
+          </span>
         </a>
         <div className={styles.socials}>
           <a
