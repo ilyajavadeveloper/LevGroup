@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import services from '../../data/services';
 import ServiceCard from '../ServiceCard/ServiceCard';
-import styles from '../ServicesSection/ServiceSection.module.css';
+import styles from './ServiceSection.module.css';
 import { motion } from 'framer-motion';
 
 export default function ServicesSection() {
@@ -15,6 +15,8 @@ export default function ServicesSection() {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
+      {/* Мягкий fade сверху */}
+      <div className={styles.topFade} />
       <h2 className={styles.title}>{t('services.title')}</h2>
       <div className={styles.grid}>
         {services.map((service, index) => (

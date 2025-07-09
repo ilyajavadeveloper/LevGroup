@@ -17,6 +17,9 @@ export default function HeroSection() {
 
   return (
     <section className={styles.hero}>
+      {/* Нижний мягкий blur по фото */}
+      <div className={styles.photoBlur}></div>
+      {/* Контент */}
       <motion.div
         className={styles.centerBlock}
         initial={{ opacity: 0, y: 50 }}
@@ -35,7 +38,8 @@ export default function HeroSection() {
           {t('hero.button')}
         </button>
       </motion.div>
-      <div className={styles.blurLine}></div>
+      {/* Нижний мягкий fade переход */}
+      <div className={styles.softFade}></div>
     </section>
   );
 }
