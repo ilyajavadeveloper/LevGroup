@@ -6,7 +6,7 @@ import HeroTitle from '../HeroTitle/HeroTitle';
 export default function HeroSection() {
   const { t } = useTranslation();
 
-  // плавный скролл до контакта
+  // Плавный скролл до контактов
   const scrollToContact = (e) => {
     e.preventDefault();
     const contactSection = document.getElementById('contact');
