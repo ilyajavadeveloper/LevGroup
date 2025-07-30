@@ -1,21 +1,34 @@
-.title {
-  /* Огромный, но респонсивный */
-  font-size: clamp(3rem, 8vw, 6.3rem);
-  font-weight: 950;
+.logoBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-bottom: 1.7rem;
-  margin-top: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  line-height: 1.04;
+  pointer-events: none;
+}
+
+.topLine {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #F5E3C1;
+  margin-bottom: 0.4rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
   font-family: 'Manrope', 'Assistant', sans-serif;
-  user-select: none;
+  font-size: clamp(2.8rem, 6.2vw, 5.8rem);
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  line-height: 1.07;
+  text-transform: uppercase;
+  margin: 0;
+  color: transparent;
+  text-align: center;
   text-shadow:
-    0 6px 40px #e1a87360,
-    0 2px 14px #00444e99;
-  z-index: 10;
-  position: relative;
-  pointer-events: none; /* чтобы не перекрывать CTA */
+          0 6px 40px #e1a87360,
+          0 2px 14px #00444e99;
 }
 
 .gradient {
@@ -29,20 +42,30 @@
   filter: brightness(1.13) drop-shadow(0 6px 28px #e1a8733a);
 }
 
+.subtext {
+  margin-top: 0.55rem;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: #F5E3C1;
+  letter-spacing: 1.4px;
+  text-shadow:
+          0 2px 8px rgba(0, 0, 0, 0.1),
+          0 2px 6px #00444e44;
+}
+
+/* Shine animation */
 @keyframes shine {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
 
-@media (max-width: 1000px) {
-  .title {
-    font-size: clamp(2.3rem, 7vw, 4.1rem);
-    margin-bottom: 1.1rem;
-  }
-}
 @media (max-width: 700px) {
-  .title {
-    font-size: clamp(1.4rem, 8vw, 2.1rem);
-    margin-bottom: 0.7rem;
+  .topLine {
+    font-size: 0.95rem;
+  }
+  .subtext {
+    font-size: 0.97rem;
+    margin-top: 0.3rem;
   }
 }
