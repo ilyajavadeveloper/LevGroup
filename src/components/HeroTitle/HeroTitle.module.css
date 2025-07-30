@@ -9,7 +9,7 @@
 .topLine {
   font-family: 'Assistant', sans-serif;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3.5vw, 1.4rem);
   color: #F5E3C1;
   margin-bottom: 0.4rem;
   letter-spacing: 1px;
@@ -18,7 +18,7 @@
 
 .title {
   font-family: 'Manrope', 'Assistant', sans-serif;
-  font-size: clamp(2.8rem, 6.2vw, 5.8rem);
+  font-size: clamp(2.5rem, 9vw, 6.3rem);
   font-weight: 900;
   letter-spacing: 0.16em;
   line-height: 1.07;
@@ -46,7 +46,7 @@
   margin-top: 0.55rem;
   font-family: 'Assistant', sans-serif;
   font-weight: 500;
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 3.8vw, 1.4rem);
   color: #F5E3C1;
   letter-spacing: 1.4px;
   text-shadow:
@@ -54,18 +54,7 @@
           0 2px 6px #00444e44;
 }
 
-/* Shine animation */
 @keyframes shine {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
-}
-
-@media (max-width: 700px) {
-  .topLine {
-    font-size: 0.95rem;
-  }
-  .subtext {
-    font-size: 0.97rem;
-    margin-top: 0.3rem;
-  }
 }
