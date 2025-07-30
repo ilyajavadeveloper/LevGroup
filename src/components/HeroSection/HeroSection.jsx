@@ -4,36 +4,33 @@ import styles from './HeroSection.module.css';
 import HeroTitle from '../HeroTitle/HeroTitle';
 
 export default function HeroSection() {
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
-  // Плавный скролл до контактов
-  const scrollToContact = (e) => {
-    e.preventDefault();
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+    // Переход в WhatsApp
+    const openWhatsApp = () => {
+        const phoneNumber = '972524388967'; // без +
+        const url = `https://wa.me/${phoneNumber}`;
+        window.open(url, '_blank');
+    };
 
-  return (
-    <section className={styles.hero}>
-      <div className={styles.photoBlur}></div>
-      <motion.div
-        className={styles.centerBlock}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <div className={styles.logoWrapper}>
-          <HeroTitle />
-        </div>
-        <div className={styles.slogan}>{t('hero.slogan')}</div>
-        <button className={styles.cta} onClick={scrollToContact} type="button">
-          {t('hero.button')}
-        </button>
-      </motion.div>
-      {/* Нижний плавный градиент */}
-      <div className={styles.softFade}></div>
-    </section>
-  );
+    return (
+        <section className={styles.hero}>
+            <div className={styles.photoBlur}></div>
+            <motion.div
+                className={styles.centerBlock}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+            >
+                <div className={styles.logoWrapper}>
+                    <HeroTitle />
+                </div>
+                <div className={styles.slogan}>{t('hero.slogan')}</div>
+                <button className={styles.cta} onClick={openWhatsApp} type="button">
+                    {t('hero.button')}
+                </button>
+            </motion.div>
+            <div className={styles.softFade}></div>
+        </section>
+    );
 }

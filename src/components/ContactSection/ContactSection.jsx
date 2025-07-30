@@ -38,7 +38,7 @@ export default function ContactSection() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <a href="tel:0525339443" className={styles.link}>
+        <a href="tel:052-438-8967" className={styles.link}>
           <FaPhoneAlt className={styles.icon} /> 052‑5339443
         </a>
         <a
