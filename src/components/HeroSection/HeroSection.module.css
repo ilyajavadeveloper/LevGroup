@@ -161,7 +161,7 @@
 
 @media (max-width: 500px) {
   .logoImage {
-    max-width: 340px;
+    max-width: 640px;
   }
   .slogan {
     font-size: 1.2rem;
