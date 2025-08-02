@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import styles from './HeroSection.module.css';
-import HeroTitle from '../HeroTitle/HeroTitle';
 
 export default function HeroSection() {
     const { t } = useTranslation();
@@ -15,6 +14,7 @@ export default function HeroSection() {
     return (
         <section className={styles.hero}>
             <div className={styles.photoBlur}></div>
+
             <motion.div
                 className={styles.centerBlock}
                 initial={{ opacity: 0, y: 50 }}
@@ -22,13 +22,20 @@ export default function HeroSection() {
                 transition={{ duration: 1 }}
             >
                 <div className={styles.logoWrapper}>
-                    <HeroTitle />
+                    <img
+                        src="/images/LEV_GROUP_LOGO_clean.png"
+                        alt="LEV GROUP Logo"
+                        className={styles.logoImage}
+                    />
                 </div>
+
                 <div className={styles.slogan}>{t('hero.slogan')}</div>
+
                 <button className={styles.cta} onClick={openWhatsApp} type="button">
                     {t('hero.button')}
                 </button>
             </motion.div>
+
             <div className={styles.softFade}></div>
         </section>
     );
