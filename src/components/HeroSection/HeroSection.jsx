@@ -1,5 +1,7 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import Logo from './Logo';
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
@@ -7,8 +9,7 @@ export default function HeroSection() {
 
     const openWhatsApp = () => {
         const phoneNumber = '972524388967';
-        const url = `https://wa.me/${phoneNumber}`;
-        window.open(url, '_blank');
+        window.open(`https://wa.me/${phoneNumber}`, '_blank');
     };
 
     return (
@@ -21,14 +22,20 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                {/* Название вместо логотипа */}
-                <h1 className={styles.title}>LEV GROUP</h1>
+                {/* Логотип по центру */}
+                <Logo className={styles.logo} />
 
-                {/* Слоган */}
-                <div className={styles.slogan}>{t('hero.slogan')}</div>
+                {/* Слоган под логотипом */}
+                <div className={styles.slogan}>
+                    {t('hero.slogan')}
+                </div>
 
                 {/* Кнопка CTA */}
-                <button className={styles.cta} onClick={openWhatsApp} type="button">
+                <button
+                    className={styles.cta}
+                    type="button"
+                    onClick={openWhatsApp}
+                >
                     {t('hero.button')}
                 </button>
             </motion.div>
