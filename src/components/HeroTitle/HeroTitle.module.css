@@ -2,59 +2,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   pointer-events: none;
+  margin-bottom: 0.1rem; /* ближе к тексту */
 }
 
-.topLine {
-  font-family: 'Assistant', sans-serif;
-  font-weight: 600;
-  font-size: clamp(1rem, 3.5vw, 1.4rem);
-  color: #F5E3C1;
-  margin-bottom: 0.4rem;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+.logoImage {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  background: transparent;
 }
 
-.title {
-  font-family: 'Manrope', 'Assistant', sans-serif;
-  font-size: clamp(2.5rem, 9vw, 6.3rem);
-  font-weight: 900;
-  letter-spacing: 0.16em;
-  line-height: 1.07;
-  text-transform: uppercase;
-  margin: 0;
-  color: transparent;
-  text-align: center;
-  text-shadow:
-          0 6px 40px #e1a87360,
-          0 2px 14px #00444e99;
+@media (max-width: 1000px) {
+  .logoImage {
+    max-width: 600px;
+  }
 }
 
-.gradient {
-  background: linear-gradient(93deg, #FFEBC2 0%, #E1A873 40%, #FFF4DD 61%, #E1A873 100%);
-  background-size: 350% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  animation: shine 5s linear infinite;
-  filter: brightness(1.13) drop-shadow(0 6px 28px #e1a8733a);
+@media (max-width: 700px) {
+  .logoImage {
+    max-width: 400px;
+  }
 }
 
-.subtext {
-  margin-top: 0.55rem;
-  font-family: 'Assistant', sans-serif;
-  font-weight: 500;
-  font-size: clamp(1rem, 3.8vw, 1.4rem);
-  color: #F5E3C1;
-  letter-spacing: 1.4px;
-  text-shadow:
-          0 2px 8px rgba(0, 0, 0, 0.1),
-          0 2px 6px #00444e44;
-}
-
-@keyframes shine {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+@media (max-width: 500px) {
+  .logoImage {
+    max-width: 300px;
+  }
 }

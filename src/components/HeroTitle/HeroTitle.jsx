@@ -9,13 +9,12 @@ export default function HeroTitle() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.15 }}
         >
-            <div className={styles.topLine}>קבוצת</div>
-            <h1 className={styles.title}>
-                <span className={styles.gradient}>LEV</span>
-                <br />
-                <span className={styles.gradient}>GROUP</span>
-            </h1>
-            <div className={styles.subtext}>אחזקה · ניהול · תיווך</div>
+            <img
+                src="/images/LEV_GROUP_LOGO_clean.png"
+                alt="LEV GROUP Logo"
+                className={styles.logoImage}
+            />
+
         </motion.div>
     );
 }

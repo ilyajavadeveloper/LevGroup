@@ -6,9 +6,8 @@ import HeroTitle from '../HeroTitle/HeroTitle';
 export default function HeroSection() {
     const { t } = useTranslation();
 
-    // Переход в WhatsApp
     const openWhatsApp = () => {
-        const phoneNumber = '972524388967'; // без +
+        const phoneNumber = '972524388967';
         const url = `https://wa.me/${phoneNumber}`;
         window.open(url, '_blank');
     };
