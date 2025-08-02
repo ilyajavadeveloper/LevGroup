@@ -20,37 +20,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   min-height: 85vh;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
   text-align: center;
-  padding: 0 1.5rem 4vh 1.5rem;
+  padding: 0 1.5rem 5vh 1.5rem;
 }
 
 .logoWrapper {
-
   width: 100%;
-  width: 990px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  margin-bottom: 1rem;
+  gap: 1.2rem;
 }
 
 .slogan {
-
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 800;
   color: #E1A873;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
   text-align: center;
-  line-height: 4.5;
+  line-height: 1.4;
   text-shadow: 0 2px 14px rgba(0,0,0,0.08), 0 2px 9px #00444E;
   font-family: 'Manrope', 'Assistant', sans-serif;
   max-width: 1000px;
-  margin-top: 10px;
+  margin: 0;
   word-break: break-word;
 }
 
@@ -58,17 +57,16 @@
   display: inline-block;
   background: linear-gradient(92deg, #E1A873 0%, #00444E 100%);
   color: #222;
-  padding: 1.2em 3.2em;
+  padding: 1.1em 3em;
   border-radius: 90px;
-  margin-bottom:50px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
   box-shadow: 0 4px 18px rgba(225, 168, 115, 0.13);
   border: none;
-  margin-top: 0.6rem;
+  margin-top: 1.6rem;
   cursor: pointer;
   transition: background 0.23s, color 0.17s, transform 0.15s, box-shadow 0.15s;
 }
@@ -123,12 +121,8 @@
 }
 
 @media (max-width: 1200px) {
-  .logoWrapper {
-    margin-bottom: 0.5rem;
-  }
-
   .slogan {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .cta {
@@ -139,26 +133,26 @@
 
 @media (max-width: 700px) {
   .centerBlock {
-    padding: 24px 4vw 18px 4vw;
+    padding: 24px 4vw 24px 4vw;
   }
 
   .slogan {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
   }
 
   .cta {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 0.9em 2em;
   }
 }
 
 @media (max-width: 500px) {
   .slogan {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
 
   .cta {
-    font-size: 2.92rem;
+    font-size: 1rem;
     padding: 0.7em 1.5em;
   }
 }
