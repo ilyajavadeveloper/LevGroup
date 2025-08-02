@@ -1,19 +1,28 @@
-
 /* HeroSection.module.css */
+:root {
+  /* Горизонтальные отступы: от 0.5rem до 1rem */
+  --pad-h: clamp(0.5rem, 2vw, 1rem);
+  /* Нижний отступ для хиро: от 10vh до 25vh */
+  --pad-b: clamp(10vh, 18vh, 25vh);
+  /* Минимальная ширина логотипа для маленьких экранов */
+  --logo-min: 200px;
+  /* Максимальная ширина логотипа (двухкратный исходный размер) */
+  --logo-max: 1600px;
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;   /* выравнивание по нижнему краю */
-  padding: 0 1rem;
-  padding-bottom: 18vh;             /* отступ снизу, поднимающий контент выше */
+  align-items: center;
+  padding: 0 var(--pad-h);
+  padding-bottom: var(--pad-b);
   background:
           linear-gradient(120deg, rgba(0,68,78,0.66) 0%, rgba(225,168,115,0.14) 75%, rgba(245,227,193,0.13) 100%),
           url('/images/ashdod.jpg') center/cover no-repeat;
   background-attachment: fixed;
-  background-position: center center;
   overflow: hidden;
 }
 
@@ -24,30 +33,37 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
   max-width: 1000px;
   width: 100%;
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 2rem);
 }
 
 .logoWrapper {
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 1.5rem;
+  position: relative;
+  width: clamp(var(--logo-min), 50%, var(--logo-max));
+  max-width: var(--logo-max);
+  margin-bottom: clamp(1rem, 5vw, 2rem);
+  overflow: hidden; /* Обрезаем лишнее */
 }
 
 .logoImage {
-  width: 100%;
+  position: relative;
+  width: 200%; /* Вдвое шире контейнера */
   height: auto;
   object-fit: contain;
+  left: 50%;
+  transform: translateX(-50%); /* Центрируем */
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
 }
 
 .slogan {
   color: #E1A873;
-  font-size: 2.4rem;
+  /* шрифт от 1rem до 2.4rem, идеально 4vw */
+  font-size: clamp(1rem, 4vw, 2.4rem);
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
   font-family: 'Manrope', 'Assistant', sans-serif;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -55,9 +71,9 @@
 .cta {
   background: linear-gradient(92deg, #E1A873 0%, #00444E 100%);
   color: #222;
-  padding: 1em 2.5em;
+  padding: clamp(0.75em, 2vw, 1em) clamp(1.5em, 4vw, 2.5em);
   border-radius: 90px;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -78,17 +94,17 @@
 .photoBlur {
   position: absolute;
   left: 0;
-  bottom: calc(18vh + 60px);      /* смещение вместе с padding-bottom */
+  bottom: calc(var(--pad-b) + 60px);
   width: 100vw;
   height: 80px;
   pointer-events: none;
   background: linear-gradient(
           to bottom,
-          rgba(245,227,193,0.00) 0%,
+          rgba(245,227,193,0) 0%,
           rgba(240,210,150,0.09) 15%,
           rgba(225,168,115,0.15) 44%,
           rgba(0,68,78,0.14) 82%,
-          rgba(0,68,78,0.20) 100%
+          rgba(0,68,78,0.2) 100%
   );
   filter: blur(32px);
   opacity: 0.9;
