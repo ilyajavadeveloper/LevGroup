@@ -10,9 +10,22 @@ body {
   background-size: cover;
   min-height: 100vh;
   overflow-x: hidden;
+
+  /* Блокируем горизонтальные жесты, оставляем вертикальный скролл */
+  touch-action: pan-y;
+  /* Опционально — запрет выделения и перетаскивания */
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
 }
+
 .services,
 .hero {
   background-attachment: fixed;
   background-position: center center;
+
+  /* Тоже запрещаем горизонтальные свайпы */
+  touch-action: pan-y;
 }
