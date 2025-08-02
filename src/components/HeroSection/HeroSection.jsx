@@ -1,4 +1,3 @@
-// HeroSection.jsx
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import styles from './HeroSection.module.css';
@@ -22,16 +21,13 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                <div className={styles.logoWrapper}>
-                    <img
-                        src="/images/LEV_GROUP_LOGO_clean.png"
-                        alt="LEV GROUP Logo"
-                        className={styles.logoImage}
-                    />
-                </div>
+                {/* Название вместо логотипа */}
+                <h1 className={styles.title}>LEV GROUP</h1>
 
+                {/* Слоган */}
                 <div className={styles.slogan}>{t('hero.slogan')}</div>
 
+                {/* Кнопка CTA */}
                 <button className={styles.cta} onClick={openWhatsApp} type="button">
                     {t('hero.button')}
                 </button>

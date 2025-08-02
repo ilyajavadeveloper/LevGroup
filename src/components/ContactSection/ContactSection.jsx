@@ -39,7 +39,7 @@ export default function ContactSection() {
         transition={{ delay: 0.5 }}
       >
         <a href="tel:0524388967" className={styles.link}>
-          <FaPhoneAlt className={styles.icon} /> 052‑5339443
+          <FaPhoneAlt className={styles.icon} /> 0524388967
         </a>
         <a
           href="mailto:levgroup.m@gmail.com"
@@ -63,7 +63,7 @@ export default function ContactSection() {
         </a>
         <div className={styles.socials}>
           <a
-            href="https://wa.me/972525339443"
+            href="https://wa.me/0524388967"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
