@@ -1,3 +1,4 @@
+// HeroSection.jsx
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import styles from './HeroSection.module.css';
@@ -13,10 +14,10 @@ export default function HeroSection() {
 
     return (
         <section className={styles.hero}>
-            <div className={styles.photoBlur}></div>
+            <div className={styles.photoBlur} />
 
             <motion.div
-                className={styles.centerBlock}
+                className={styles.content}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
@@ -36,7 +37,7 @@ export default function HeroSection() {
                 </button>
             </motion.div>
 
-            <div className={styles.softFade}></div>
+            <div className={styles.softFade} />
         </section>
     );
 }
