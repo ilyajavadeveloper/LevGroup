@@ -5,12 +5,15 @@
   min-height: 100vh;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;   /* выравнивание по нижнему краю */
   padding: 0 1rem;
+  padding-bottom: 18vh;             /* отступ снизу, поднимающий контент выше */
   background:
           linear-gradient(120deg, rgba(0,68,78,0.66) 0%, rgba(225,168,115,0.14) 75%, rgba(245,227,193,0.13) 100%),
           url('/images/ashdod.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
   overflow: hidden;
 }
 
@@ -20,7 +23,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   max-width: 1000px;
   width: 100%;
@@ -29,7 +31,7 @@
 
 .logoWrapper {
   width: 100%;
-  max-width: 650px;     /* увеличено для всех экранов */
+  max-width: 800px;
   margin-bottom: 1.5rem;
 }
 
@@ -76,7 +78,7 @@
 .photoBlur {
   position: absolute;
   left: 0;
-  bottom: 80px;
+  bottom: calc(18vh + 60px);      /* смещение вместе с padding-bottom */
   width: 100vw;
   height: 80px;
   pointer-events: none;
@@ -112,54 +114,4 @@
                   rgba(0,68,78,0.09) 100%
           );
   opacity: 1;
-}
-
-/* Media Queries */
-
-@media (max-width: 1200px) {
-  .logoWrapper {
-    max-width: 550px;
-  }
-  .slogan {
-    font-size: 2rem;
-    margin-bottom: 3.6rem;
-  }
-  .cta {
-    font-size: 1.1rem;
-    padding: 0.9em 2.2em;
-  }
-}
-
-@media (max-width: 700px) {
-  .hero {
-    justify-content: flex-start;
-    padding-top: 12vh;
-  }
-  .logoWrapper {
-    max-width: 420px;     /* увеличено на малых экранах */
-    margin-bottom: 1.2rem;
-  }
-  .slogan {
-    font-size: 1.6rem;
-    margin-bottom: 3.2rem;
-  }
-  .cta {
-    font-size: 1rem;
-    padding: 0.8em 2em;
-  }
-}
-
-@media (max-width: 500px) {
-  .logoWrapper {
-    max-width: 320px;     /* больше, чем ранее */
-    margin-bottom: 1rem;
-  }
-  .slogan {
-    font-size: 1.4rem;
-    margin-bottom: 2.8rem;
-  }
-  .cta {
-    font-size: 0.9rem;
-    padding: 0.7em 1.8em;
-  }
 }

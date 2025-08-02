@@ -11,3 +11,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+.services,
+.hero {
+  background-attachment: fixed;
+  background-position: center center;
+}
