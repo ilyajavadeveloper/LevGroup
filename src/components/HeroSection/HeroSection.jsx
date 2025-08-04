@@ -28,7 +28,6 @@ export default function HeroSection() {
                 </div>
                 <button
                     className={styles.cta}
-                    type="button"
                     onClick={openWhatsApp}
                 >
                     {t('hero.button')}

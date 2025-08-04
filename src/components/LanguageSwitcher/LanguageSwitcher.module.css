@@ -3,7 +3,7 @@
   position: fixed;
   top: 16px;
   left: 16px;
-  z-index: 10000;
+  z-index: 99999; /* максимально выше, чтобы не перекрывалось */
 }
 
 .toggle {
@@ -42,7 +42,7 @@
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0);  }
 }
 
 .menu li { width: 100%; }

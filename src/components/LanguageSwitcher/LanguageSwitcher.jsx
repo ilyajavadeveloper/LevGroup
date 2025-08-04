@@ -18,16 +18,16 @@ export default function LanguageSwitcher() {
   const menuRef = useRef(null);
 
   useEffect(() => {
-    const closeMenu = (e) => {
+    const onClickOutside = e => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
         setOpen(false);
       }
     };
-    if (open) document.addEventListener('mousedown', closeMenu);
-    return () => document.removeEventListener('mousedown', closeMenu);
+    if (open) document.addEventListener('mousedown', onClickOutside);
+    return () => document.removeEventListener('mousedown', onClickOutside);
   }, [open]);
 
-  const changeLanguage = (lng) => {
+  const changeLanguage = lng => {
     i18n.changeLanguage(lng);
     setOpen(false);
   };
