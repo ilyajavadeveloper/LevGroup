@@ -1,7 +1,8 @@
+/* src/components/LanguageSwitcher.module.css */
 .switcher {
-  position: absolute;
+  position: fixed;   /* <-- было absolute, стало fixed */
   top: 24px;
-  left: 28px;        /* БЫЛО right: 28px; СТАЛО left! */
+  left: 28px;
   z-index: 99;
 }
 
@@ -21,14 +22,15 @@
   backdrop-filter: blur(2px);
 }
 
-.toggle:hover, .toggle:focus {
+.toggle:hover,
+.toggle:focus {
   background: #E1A873;
   color: #00444E;
 }
 
 .menu {
   position: absolute;
-  left: 0;          /* БЫЛО right: 0; */
+  left: 0;
   top: 120%;
   min-width: 122px;
   background: #fff;
@@ -42,11 +44,13 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px);}
-  to { opacity: 1; transform: translateY(0);}
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.menu li { width: 100%; }
+.menu li {
+  width: 100%;
+}
 
 .menu button {
   width: 100%;
@@ -60,10 +64,13 @@
   cursor: pointer;
   transition: background 0.13s, color 0.11s;
 }
-.menu button:hover, .menu button:focus {
+
+.menu button:hover,
+.menu button:focus {
   background: #E1A873;
   color: #222;
 }
+
 .menu .active {
   background: #00444E;
   color: #fff;
@@ -71,7 +78,15 @@
 }
 
 @media (max-width: 700px) {
-  .switcher { top: 14px; left: 10px; }
-  .toggle { padding: 5.5px 12px 5.5px 10px; font-size: 0.97rem; }
-  .menu { min-width: 96px; }
+  .switcher {
+    top: 14px;
+    left: 10px;
+  }
+  .toggle {
+    padding: 5.5px 12px 5.5px 10px;
+    font-size: 0.97rem;
+  }
+  .menu {
+    min-width: 96px;
+  }
 }
