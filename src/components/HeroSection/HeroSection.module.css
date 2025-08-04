@@ -24,8 +24,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  /* Градиент + абсолютный путь к public/images */
   background:
           linear-gradient(
                   120deg,
@@ -35,20 +33,6 @@
           ),
           url('/images/ashdod.jpg') center/cover no-repeat fixed;
   background-color: #002c34;
-}
-
-/* Ретина-фон */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .hero {
-    background:
-            linear-gradient(
-                    120deg,
-                    rgba(0, 68, 78, 0.66) 0%,
-                    rgba(225, 168, 115, 0.14) 75%,
-                    rgba(245, 227, 193, 0.13) 100%
-            ),
-            url('/images/ashdod@2x.jpg') center/cover no-repeat fixed;
-  }
 }
 
 .content {
@@ -65,7 +49,6 @@
 }
 
 .logo {
-  /* Абсолютный путь к public/images/logo.png */
   mask: url('/images/logo.png') no-repeat center/contain;
   -webkit-mask: url('/images/logo.png') no-repeat center/contain;
   background: linear-gradient(
@@ -86,7 +69,6 @@
   line-height: 1.2;
   font-size: clamp(1rem, 4vw, 2.4rem);
   margin-bottom: clamp(2rem, 5vw, 4rem);
-
   background: linear-gradient(90deg, var(--sunset-from), var(--sunset-to));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
