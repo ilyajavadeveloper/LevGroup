@@ -1,5 +1,6 @@
 // src/components/LanguageSwitcher.jsx
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { FaGlobe } from 'react-icons/fa';
 import styles from './LanguageSwitcher.module.css';
@@ -33,7 +34,7 @@ export default function LanguageSwitcher() {
 
   const active = languages.find(l => l.code === i18n.language) || languages[1];
 
-  return (
+  const switcher = (
       <div className={styles.switcher} ref={menuRef}>
         <button
             className={styles.toggle}
@@ -60,4 +61,6 @@ export default function LanguageSwitcher() {
         )}
       </div>
   );
+
+  return createPortal(switcher, document.body);
 }

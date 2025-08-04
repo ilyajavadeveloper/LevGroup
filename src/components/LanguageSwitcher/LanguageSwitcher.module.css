@@ -1,9 +1,9 @@
 /* src/components/LanguageSwitcher.module.css */
 .switcher {
-  position: fixed;   /* <-- было absolute, стало fixed */
-  top: 24px;
-  left: 28px;
-  z-index: 99;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 10000;
 }
 
 .toggle {
@@ -21,7 +21,6 @@
   transition: background 0.19s, color 0.14s;
   backdrop-filter: blur(2px);
 }
-
 .toggle:hover,
 .toggle:focus {
   background: #E1A873;
@@ -30,8 +29,8 @@
 
 .menu {
   position: absolute;
-  left: 0;
   top: 120%;
+  left: 0;
   min-width: 122px;
   background: #fff;
   border-radius: 10px;
@@ -40,18 +39,13 @@
   margin: 0;
   list-style: none;
   animation: fadeIn 0.18s;
-  overflow: hidden;
 }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.menu li {
-  width: 100%;
-}
-
+.menu li { width: 100%; }
 .menu button {
   width: 100%;
   background: none;
@@ -64,13 +58,11 @@
   cursor: pointer;
   transition: background 0.13s, color 0.11s;
 }
-
 .menu button:hover,
 .menu button:focus {
   background: #E1A873;
   color: #222;
 }
-
 .menu .active {
   background: #00444E;
   color: #fff;
@@ -79,11 +71,11 @@
 
 @media (max-width: 700px) {
   .switcher {
-    top: 14px;
+    top: 10px;
     left: 10px;
   }
   .toggle {
-    padding: 5.5px 12px 5.5px 10px;
+    padding: 6px 14px;
     font-size: 0.97rem;
   }
   .menu {
