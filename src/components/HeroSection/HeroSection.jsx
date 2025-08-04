@@ -9,8 +9,7 @@ export default function HeroSection() {
     const { t } = useTranslation();
 
     const openWhatsApp = () => {
-        const phoneNumber = '972524388967';
-        window.open(`https://wa.me/${phoneNumber}`, '_blank');
+        window.open('https://wa.me/972524388967', '_blank');
     };
 
     return (
@@ -23,15 +22,10 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                {/* Логотип по центру */}
                 <Logo className={styles.logo} />
-
-                {/* Слоган под логотипом */}
                 <div className={styles.slogan}>
                     {t('hero.slogan')}
                 </div>
-
-                {/* Кнопка CTA */}
                 <button
                     className={styles.cta}
                     type="button"

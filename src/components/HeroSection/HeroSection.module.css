@@ -1,15 +1,10 @@
 /* src/components/HeroSection.module.css */
 :root {
-  /* Отступы */
-  --pad-h:      clamp(0.5rem, 2vw, 1rem);
-  --pad-b:      clamp(10vh, 18vh, 25vh);
-
-  /* Градиент для логотипа: теперь 3 оттенка, чуть мягче */
-  --logo-dark:  #013220;
-  --logo-mid:   #014F37;
-  --logo-light: #2D6F54;
-
-  /* Градиент для слогана */
+  --pad-h:       clamp(0.5rem, 2vw, 1rem);
+  --pad-b:       clamp(10vh, 18vh, 25vh);
+  --logo-dark:   #013220;
+  --logo-mid:    #014F37;
+  --logo-light:  #2D6F54;
   --sunset-from: #FFC8A2;
   --sunset-to:   #E1A873;
 }
@@ -20,7 +15,6 @@
   overflow-x: hidden;
 }
 
-/* === Секция «Hero» === */
 .hero {
   position: relative;
   width: 100vw;
@@ -30,7 +24,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* 2-позиционный фон: градиент + hi-res image-set */
+
+  /* Градиент + абсолютный путь к public/images */
   background:
           linear-gradient(
                   120deg,
@@ -38,12 +33,11 @@
                   rgba(225, 168, 115, 0.14) 75%,
                   rgba(245, 227, 193, 0.13) 100%
           ),
-            /* стандартный */
           url('/images/ashdod.jpg') center/cover no-repeat fixed;
-  background-color: #002c34; /* на случай, если картинка ещё не подтянулась */
+  background-color: #002c34;
 }
 
-/* для ретина-экранов */
+/* Ретина-фон */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .hero {
     background:
@@ -57,7 +51,6 @@
   }
 }
 
-/* Контейнер с контентом */
 .content {
   position: relative;
   z-index: 10;
@@ -71,27 +64,22 @@
   padding: clamp(1rem, 2vw, 2rem);
 }
 
-/* === Логотип === */
 .logo {
-  mask: url('/images/logo.png') no-repeat center / contain;
-  -webkit-mask: url('/images/logo.png') no-repeat center / contain;
+  /* Абсолютный путь к public/images/logo.png */
+  mask: url('/images/logo.png') no-repeat center/contain;
+  -webkit-mask: url('/images/logo.png') no-repeat center/contain;
   background: linear-gradient(
           135deg,
           var(--logo-dark),
           var(--logo-mid),
           var(--logo-light)
   );
-
-  /* Сделали ещё крупнее */
   width: clamp(500px, 70vw, 1000px);
-  aspect-ratio: 600 / 140;
+  aspect-ratio: 600/140;
   margin-bottom: clamp(2rem, 5vw, 4rem);
-
-  /* Лёгкая тень, чтобы «выпрыгивало» из фона */
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-/* === Слоган === */
 .slogan {
   font-family: 'Manrope', 'Assistant', sans-serif;
   font-weight: 800;
@@ -105,7 +93,6 @@
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* === Кнопка CTA === */
 .cta {
   background: linear-gradient(92deg, var(--sunset-to) 0%, var(--logo-dark) 100%);
   color: #222;
@@ -129,7 +116,6 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
 }
 
-/* === Эффекты размытия === */
 .photoBlur {
   position: absolute;
   left: 0;
@@ -170,7 +156,6 @@
   z-index: 20;
 }
 
-/* === Адаптивность логотипа === */
 @media (max-width: 700px) {
   .logo {
     width: clamp(400px, 80vw, 1000px);
