@@ -39,7 +39,7 @@ export default function ContactSection() {
         transition={{ delay: 0.5 }}
       >
         <a href="tel:0524388967" className={styles.link}>
-          <FaPhoneAlt className={styles.icon} /> 0524388967
+          <FaPhoneAlt className={styles.icon} /> 052-438-8967
         </a>
         <a
           href="mailto:levgroup.m@gmail.com"
