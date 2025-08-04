@@ -35,6 +35,22 @@
   background-color: #002c34;
 }
 
+@media (max-width: 700px) {
+  .hero {
+    /* золотая середина: фон не обрезается слишком резко,
+       но и нет огромных пустот */
+    height: auto;
+    min-height: 90vh;
+    padding-bottom: clamp(10vh, 12vh, 14vh);
+    background-attachment: scroll;
+    background-position: center center;
+  }
+
+  .logo {
+    width: clamp(450px, 75vw, 900px);
+  }
+}
+
 .content {
   position: relative;
   z-index: 10;
@@ -60,7 +76,7 @@
   width: clamp(500px, 70vw, 1000px);
   aspect-ratio: 600/140;
   margin-bottom: clamp(2rem, 5vw, 4rem);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
 }
 
 .slogan {
@@ -72,7 +88,7 @@
   background: linear-gradient(90deg, var(--sunset-from), var(--sunset-to));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .cta {
@@ -87,7 +103,7 @@
   border: none;
   border-radius: 90px;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .cta:hover,
@@ -95,7 +111,7 @@
   background: linear-gradient(90deg, var(--logo-dark) 0%, var(--sunset-to) 100%);
   color: #FFEBC2;
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
 }
 
 .photoBlur {
@@ -136,10 +152,4 @@
           );
   pointer-events: none;
   z-index: 20;
-}
-
-@media (max-width: 700px) {
-  .logo {
-    width: clamp(400px, 80vw, 1000px);
-  }
 }
