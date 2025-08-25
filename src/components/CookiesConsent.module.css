@@ -1,9 +1,7 @@
-/* src/components/CookieConsent.module.css */
-
 .banner {
   position: fixed;
-  inset: auto 0 0 0; /* прижимаем к низу */
-  padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+  inset: auto 0 0 0;
+  padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
   background: #1f2a32;
   color: #fff;
   display: flex;
@@ -14,7 +12,7 @@
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.5;
   font-size: clamp(14px, 1.6vw, 16px);
-  z-index: 2147483647; /* поверх всего */
+  z-index: 2147483647;
   box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.18);
 }
 
@@ -34,40 +32,44 @@
   gap: 8px;
 }
 
+.buttonAccept,
+.buttonDecline {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .buttonAccept {
   background: #3beaef;
   border: none;
-  padding: 10px 16px;
-  cursor: pointer;
-  border-radius: 8px;
-  font-weight: 700;
   color: #072026;
-  flex: 0 0 auto;
 }
 
 .buttonDecline {
   background: transparent;
   border: 1px solid #3beaef;
-  padding: 10px 16px;
-  cursor: pointer;
-  border-radius: 8px;
-  font-weight: 700;
   color: #3beaef;
-  flex: 0 0 auto;
 }
 
 @media (max-width: 600px) {
   .banner {
     flex-direction: column;
-    align-items: stretch;
     text-align: center;
+    gap: 10px;
   }
+
   .actions {
     width: 100%;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    gap: 12px;
   }
+
   .buttonAccept,
   .buttonDecline {
     flex: 1;
+    padding: 10px;
   }
 }
