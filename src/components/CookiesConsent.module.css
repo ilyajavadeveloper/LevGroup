@@ -21,6 +21,11 @@
   word-break: break-word;
 }
 
+.link {
+  color: #3beaef;
+  text-decoration: underline;
+}
+
 .actions {
   display: flex;
   gap: 8px;

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+// src/components/CookieConsent.jsx
+import React, { useState } from "react";
 import styles from '../components/CookiesConsent.module.css';
 
 export default function CookieConsent() {
@@ -7,18 +8,7 @@ export default function CookieConsent() {
   const accept = () => setVisible(false);
   const decline = () => setVisible(false);
 
-  useEffect(() => {
-    if (visible) {
-      document.body.style.paddingBottom = "80px"; // высота баннера
-    } else {
-      document.body.style.paddingBottom = "0px";
-    }
-    return () => {
-      document.body.style.paddingBottom = "0px";
-    };
-  }, [visible]);
-
-  if (!visible) return null;
+  if (!visible) return null; // 👈 вообще ничего не рендерим
 
   return (
     <div className={styles.banner}>
