@@ -1,14 +1,27 @@
 // src/components/CookieConsent.jsx
-import React, { useState } from "react";
-import styles from '../components/CookiesConsent.module.css';
+import React, { useState, useEffect } from "react";
+import styles from "../components/CookiesConsent.module.css";
 
 export default function CookieConsent() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
-  const accept = () => setVisible(false);
-  const decline = () => setVisible(false);
+  useEffect(() => {
+    // проверяем, уже принял или отклонил
+    const choice = localStorage.getItem("cookieConsent");
+    if (!choice) setVisible(true);
+  }, []);
 
-  if (!visible) return null; // 👈 вообще ничего не рендерим
+  const accept = () => {
+    localStorage.setItem("cookieConsent", "accepted");
+    setVisible(false);
+  };
+
+  const decline = () => {
+    localStorage.setItem("cookieConsent", "declined");
+    setVisible(false);
+  };
+
+  if (!visible) return null;
 
   return (
     <div className={styles.banner}>
@@ -24,3 +37,4 @@ export default function CookieConsent() {
     </div>
   );
 }
+  
