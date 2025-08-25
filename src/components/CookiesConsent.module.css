@@ -8,23 +8,17 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.5;
-  font-size: clamp(14px, 1.6vw, 16px);
+  gap: 10px;
+  font-size: clamp(13px, 1.6vw, 15px);
+  line-height: 1.4;
   z-index: 2147483647;
-  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 -6px 18px rgba(0,0,0,0.2);
 }
 
 .banner > span {
   flex: 1;
   min-width: 0;
   word-break: break-word;
-}
-
-.link {
-  color: #3beaef;
-  text-decoration: underline;
 }
 
 .actions {
@@ -34,7 +28,7 @@
 
 .buttonAccept,
 .buttonDecline {
-  padding: 8px 14px;
+  padding: 8px 12px;
   border-radius: 6px;
   font-weight: 700;
   cursor: pointer;
@@ -56,20 +50,16 @@
   .banner {
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+    align-items: stretch;
   }
 
   .actions {
     width: 100%;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap: 12px;
   }
 
   .buttonAccept,
   .buttonDecline {
     flex: 1;
-    padding: 10px;
   }
 }
