@@ -6,9 +6,18 @@ export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // проверяем, уже принял или отклонил
     const choice = localStorage.getItem("cookieConsent");
-    if (!choice) setVisible(true);
+    if (!choice) {
+      setVisible(true);
+
+      // авто-закрытие через 10 секунд
+      const timer = setTimeout(() => {
+        localStorage.setItem("cookieConsent", "auto-closed");
+        setVisible(false);
+      }, 10000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const accept = () => {
@@ -25,7 +34,7 @@ export default function CookieConsent() {
 
   return (
     <div className={styles.banner}>
-      <span>
+      <span className={styles.text}>
         אנו משתמשים בעוגיות (Cookies) כדי לשפר את חווית המשתמש באתר.  
         לפרטים נוספים קרא את{" "}
         <a href="/privacy.html" className={styles.link}>מדיניות הפרטיות</a>.
@@ -37,4 +46,3 @@ export default function CookieConsent() {
     </div>
   );
 }
-  

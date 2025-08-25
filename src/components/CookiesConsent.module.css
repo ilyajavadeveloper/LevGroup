@@ -1,22 +1,24 @@
 .banner {
   position: fixed;
-  inset: auto 0 0 0;
-  padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+  inset: auto 0 0 0; /* снизу, по всей ширине */
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
   background: #1f2a32;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
   font-size: clamp(13px, 1.6vw, 15px);
   line-height: 1.4;
   z-index: 2147483647;
   box-shadow: 0 -6px 18px rgba(0,0,0,0.2);
+  max-width: 100%;   /* не вылезаем */
+  box-sizing: border-box;
 }
 
-.banner > span {
-  flex: 1;
+.text {
+  flex: 1 1 200px;
   min-width: 0;
   word-break: break-word;
 }
@@ -29,6 +31,7 @@
 .actions {
   display: flex;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .buttonAccept,
@@ -37,6 +40,8 @@
   border-radius: 6px;
   font-weight: 700;
   cursor: pointer;
+  font-size: clamp(13px, 1.5vw, 15px);
+  white-space: nowrap;
 }
 
 .buttonAccept {
@@ -51,20 +56,37 @@
   color: #3beaef;
 }
 
-@media (max-width: 600px) {
+/* 📱 мобильные */
+@media (max-width: 768px) {
   .banner {
     flex-direction: column;
-    text-align: center;
     align-items: stretch;
+    text-align: center;
+    gap: 14px;
   }
 
   .actions {
     width: 100%;
     justify-content: center;
+    gap: 10px;
   }
 
   .buttonAccept,
   .buttonDecline {
     flex: 1;
+  }
+}
+
+/* 📱 очень маленькие экраны */
+@media (max-width: 380px) {
+  .banner {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .buttonAccept,
+  .buttonDecline {
+    font-size: 12px;
+    padding: 6px 8px;
   }
 }
