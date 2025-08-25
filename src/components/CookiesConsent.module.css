@@ -1,0 +1,48 @@
+.banner {
+  position: fixed;
+  inset: auto 0 0 0;                     /* прижимаем к низу */
+  padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+  background: #1f2a32;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: clamp(14px, 1.6vw, 16px);
+  z-index: 2147483647;                   /* поверх всего */
+  box-shadow: 0 -8px 24px rgba(0,0,0,.18);
+}
+
+.banner > span {
+  flex: 1;                               /* текст занимает всё доступное */
+  min-width: 0;                          /* позволяет перенос строк */
+  word-break: break-word;                /* длинные слова переносятся */
+}
+
+.link {
+  color: #3beaef;
+  text-decoration: underline;
+}
+
+.button {
+  background: #3beaef;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 600px) {
+  .banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .button {
+    width: 100%;
+  }
+}

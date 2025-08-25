@@ -9,6 +9,7 @@ import {
   FaWhatsapp,
   FaFacebookF,
   FaInstagram,
+  FaUniversalAccess,
 } from 'react-icons/fa';
 
 export default function ContactSection() {
@@ -38,7 +39,7 @@ export default function ContactSection() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <a href="tel:0524388967" className={styles.link}>
+        <a href="tel:+972524388967" className={styles.link}>
           <FaPhoneAlt className={styles.icon} /> 052-438-8967
         </a>
         <a
@@ -61,9 +62,21 @@ export default function ContactSection() {
             </span>
           </span>
         </a>
+
+        {/* 🔹 Accessibility Declaration */}
+        <a
+          href="/accessibility.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.link}
+        >
+          <FaUniversalAccess className={styles.icon} />
+          הצהרת נגישות
+        </a>
+
         <div className={styles.socials}>
           <a
-            href="https://wa.me/0524388967"
+            href="https://wa.me/972524388967"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"

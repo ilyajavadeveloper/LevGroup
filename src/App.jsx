@@ -1,20 +1,21 @@
-import './App.css';
-import ContactSection from './components/ContactSection/ContactSection';
-import HeroSection from './components/HeroSection/HeroSection'
-import LanguageSwitcher from './components/LanguageSwitcher/LanguageSwitcher';
-import ServicesSection from './components/ServicesSection/ServiceSection';
+import "./App.css";
+import "./i18n";
 
-import './i18n';
+import LanguageSwitcher from "./components/LanguageSwitcher/LanguageSwitcher.jsx";
+import HeroSection      from "./components/HeroSection/HeroSection.jsx";
+import ServicesSection  from "./components/ServicesSection/ServiceSection.jsx";
+import ContactSection   from "./components/ContactSection/ContactSection.jsx";
+import CookieConsent from "./components/CookiesConsent.jsx";
 
-function App() {
+
+export default function App() {
   return (
     <div className="App">
-      <LanguageSwitcher/>
+      <LanguageSwitcher />
       <HeroSection />
       <ServicesSection />
       <ContactSection />
+      <CookieConsent />
     </div>
   );
 }
-
-export default App;
